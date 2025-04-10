@@ -7,6 +7,9 @@ public class Visitante {
     private GregorianCalendar fechaEntrada;
     private GregorianCalendar fechaSalida;
 
+    public Visitante(String number, String estela, String campoverde, String number1, String mail, String visitaTécnica, GregorianCalendar gregorianCalendar, GregorianCalendar gregorianCalendar1) {
+    }
+
     public String getMotivo() {
         return motivo;
     }

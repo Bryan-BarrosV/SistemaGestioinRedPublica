@@ -1,43 +1,43 @@
 package ec.edu.ups.poo.clases;
 
-import java.util.GregorianCalendar;
+import java.util.ArrayList;
 import java.util.List;
+import ec.edu.ups.poo.enums.TipoDireccion;
 
 public class Institucion {
-    private String identificacion;
-    private String rol;
-    private GregorianCalendar fechaInicio;
+    private String nombre;
+    private List<String> sedes;
     private List<Direccion> direccion;
+    private List<Asignacion> asignaciones;
 
-    // Getters y Setters
-    public String getIdentificacion() {
-        return identificacion;
+    public Institucion(int i, String nombre) {
+        this.nombre = nombre;
+        this.sedes = new ArrayList<>();
+        this.direccion = new ArrayList<>();
+        this.asignaciones = new ArrayList<>();
     }
 
-    public void setIdentificacion(String identificacion) {
-        this.identificacion = identificacion;
-    }
-    public String getRol() {
-        return rol;
+    public void addDireccion(TipoDireccion tipo, String calle, String numero, String ciudad, String provincia, String pais) {
+        this.direccion.add(new Direccion(tipo, calle, numero, ciudad, provincia, pais));
     }
 
-    public void setRol(String rol) {
-        this.rol = rol;
+    public String getNombre( ) {
+        return nombre;
     }
 
-    public GregorianCalendar getFechaInicio() {
-        return fechaInicio;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void setFechaInicio(GregorianCalendar fechaInicio) {
-        this.fechaInicio = fechaInicio;
+    public List<String> getSedes() {
+        return sedes;
     }
 
     public List<Direccion> getDireccion() {
         return direccion;
     }
 
-    public void setDireccion(List<Direccion> direccion) {
-        this.direccion = direccion;
+    public List<Asignacion> getAsignaciones() {
+        return asignaciones;
     }
 }

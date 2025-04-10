@@ -6,6 +6,9 @@ public class Docente extends Persona {
     private List<String> titulosAcademicos;
     private List<String> areasDeEspecializacion;
 
+    public <T> Docente(String number, String ana, String siguencia, String number1, String mail, List<T> list, List<T> algebraLineal) {
+    }
+
     public List<String> getTitulosAcademicos() {
         return titulosAcademicos;
     }
